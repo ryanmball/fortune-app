@@ -11,28 +11,28 @@ class MyExamplesController < ApplicationController
   end
 
   def lyrics_method
-    # num_bottles = 99
-    # lyrics = []
-    # 100.times do
-    #   if num_bottles > 2
-    #     lyrics << "#{num_bottles} bottles of beer on the wall, #{num_bottles} bottles of beer"
-    #     num_bottles = num_bottles - 1
-    #     lyrics << "Take one down and pass it around, #{num_bottles} bottles of beer on the wall"
-    #   elsif num_bottles == 2
-    #     lyrics << "#{num_bottles} bottles of beer on the wall, #{num_bottles} bottles of beer"
-    #     num_bottles = num_bottles - 1
-    #     lyrics << "Take one down and pass it around, #{num_bottles} bottle of beer on the wall"
-    #   elsif num_bottles == 1
-    #     lyrics << "#{num_bottles} bottle of beer on the wall, #{num_bottles} bottle of beer"
-    #     num_bottles = num_bottles - 1
-    #     lyrics << "Take one down and pass it around, no more bottles of beer on the wall"
-    #   else
-    #     lyrics << "No more bottles of beer on the wall, no more bottles of beer"
-    #     num_bottles = 99
-    #     lyrics << "Go to the store and buy some more, #{num_bottles} bottles of beer on the wall"
-    #   end
-    # end
-    # render json: {lyrics: lyrics}
-    render json: {lyrics: "99 Bottles of Beer"}
+    num_bottles = 99
+    lyrics = []
+    100.times do
+      if num_bottles > 2
+        lyrics << "#{num_bottles} bottles of beer on the wall, #{num_bottles} bottles of beer"
+        num_bottles = num_bottles - 1
+        lyrics << "Take one down and pass it around, #{num_bottles} bottles of beer on the wall"
+      elsif num_bottles == 2
+        lyrics << "#{num_bottles} bottles of beer on the wall, #{num_bottles} bottles of beer"
+        num_bottles = num_bottles - 1
+        lyrics << "Take one down and pass it around, #{num_bottles} bottle of beer on the wall"
+      elsif num_bottles == 1
+        lyrics << "#{num_bottles} bottle of beer on the wall, #{num_bottles} bottle of beer"
+        num_bottles = num_bottles - 1
+        lyrics << "Take one down and pass it around, no more bottles of beer on the wall"
+      else
+        lyrics << "No more bottles of beer on the wall, no more bottles of beer"
+        num_bottles = 99
+        lyrics << "Go to the store and buy some more, #{num_bottles} bottles of beer on the wall"
+      end
+    end
+    render json: {lyrics: lyrics}
+    # render json: {lyrics: "99 Bottles of Beer"}
   end
 end
